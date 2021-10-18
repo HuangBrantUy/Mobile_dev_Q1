@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_dev_q1/pages/to_do.dart';
 import 'package:mobile_dev_q1/pages/profile_page.dart';
+import 'package:mobile_dev_q1/pages/settings_page.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -28,7 +29,15 @@ class Dashboard extends StatelessWidget {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => const Profile()));
                 },
-                child: const Text('PROFILE'))
+                child: const Text('PROFILE')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SettingsPage()));
+                },
+                child: const Text('Settings'))
           ],
         ),
       ),

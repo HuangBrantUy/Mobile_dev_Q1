@@ -50,7 +50,7 @@ class _LoginFormPageState extends State<LoginFormPage> {
                 onPressed: () {
                   if (mailController.text.isEmpty == false ||
                       passController.text.isEmpty == false) {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const Dashboard()));
