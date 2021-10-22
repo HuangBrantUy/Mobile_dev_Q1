@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mobile_dev_q1/pages/to_do.dart';
 import 'package:mobile_dev_q1/pages/profile_page.dart';
 import 'package:mobile_dev_q1/pages/settings_page.dart';
+import 'package:mobile_dev_q1/pages/pomodoro_timer.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -29,6 +30,7 @@ class Dashboard extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const TodoList()));
               },
             ),
+
             ElevatedButton.icon(
               icon: Icon(Icons.person),
               label: Text("User Profile"),
@@ -37,6 +39,14 @@ class Dashboard extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const Profile()));
               },
             ),
+            ElevatedButton.icon(
+              icon: Icon(Icons.alarm),
+              label: Text("Pomodoro Timer"),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const PomodoroTimer()));
+              },
+            ),//Pomodoro Timer
             ElevatedButton.icon(
               icon: Icon(Icons.settings),
               label: Text("Settings"),

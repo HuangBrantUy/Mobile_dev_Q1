@@ -1,5 +1,7 @@
 import 'package:mobile_dev_q1/pages/log_in.dart';
 import 'package:flutter/material.dart';
+import 'dart:async';
+import 'dart:ui';
 
 void main(List<String> args) {
   runApp(MaterialApp(
